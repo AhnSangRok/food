@@ -27,18 +27,23 @@ public class NoticeController {
         return noticeRepository.save(notice);
     }
     @PutMapping("/api/notice/{id}")
-    public Long updateNotice(@PathVariable Long id, @RequestBody NoticeRequestDto requestDto) {
-        noticeService.update(id, requestDto);
-        return id;
+    public Boolean updateNotice(@PathVariable Long id, @RequestBody NoticeRequestDto requestDto) {
+        Optional<Notice> notice = noticeRepository.findById(id);
+        if (notice.get().getPassword().equals(requestDto.getPassword())){
+            noticeService.update(id, requestDto);
+            return true;
+        }else{
+            return false;
+        }
     }
     @DeleteMapping("/api/notice/{id}")
-    public Long deleteNotice(@PathVariable Long id) {
-        noticeRepository.deleteById(id);
-        return id;
+    public Boolean deleteNotice(@PathVariable Long id,@RequestBody NoticeRequestDto requestDto) {
+        Optional<Notice> notice = noticeRepository.findById(id);
+        if (notice.get().getPassword().equals(requestDto.getPassword())){
+            noticeRepository.deleteById(id);
+            return true;
+        }else{
+            return false;
+        }
     }
-    @GetMapping("/api/notice/{id}")
-    public Optional<Notice> getOneNotice(@PathVariable Long id){
-        return noticeRepository.findById(id);
-    }
-
 }

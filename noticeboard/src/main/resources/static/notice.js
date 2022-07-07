@@ -1,30 +1,6 @@
-let pscheck = 0;
+
 let cd = 0;
-function getPassword(id) {
-    let password = $(`#${id}-password`).val();
-    if (password == ""){
-        alert("비밀번호를 입력해주세요");
-        return;
-    }
-    console.log(password)
-    $.ajax({
-        type: 'GET',
-        url: `/api/notice/${id}`,
-        async:false,
-        success: function (response) {
-            if (response['password'] == password){
-                pscheck = true;
-                console.log(pscheck);
-                return pscheck;
-            }else{
-                pscheck = false;
-                alert("비밀번호를 다시 입력해주세요");
-                console.log(pscheck);
-                return pscheck;
-            }
-        }
-    })
-}
+
 function updateForm(id) {
     $(`.${id}-text-form`).hide();
     $(`#${id}-content`).show();
@@ -147,45 +123,45 @@ function updateEdits(id) {
     let text = $(`#${id}-textarea`).val();
     let password = $(`#${id}-password`).val();
 
-    getPassword(id);
-
-    if (pscheck == 0){
-        return;
-    }else if(pscheck == false){
-        return;
-    }
-
     let data = {'title':title, 'name':name, 'text': text, 'password' :password};
     $.ajax({
         type: "PUT",
         url: `/api/notice/${id}`,
         contentType: "application/json",
-        async: false,
         data: JSON.stringify(data),
         success: function (response) {
-            alert('내용 변경에 성공하였습니다.');
-            window.location.reload();
+            let check = response
+            if (check == true){
+                alert('내용 변경에 성공하였습니다.');
+                window.location.reload();
+            }else{
+                alert('비밀번호가 틀렸습니다.');
+            }
         }
     });
 }
 
-
 function deleteOne(id) {
-    getPassword(id);
+    let password = $(`#${id}-password`).val();
 
-    if (pscheck == 0){
-        return;
-    }else if(pscheck == false){
-        return;
-    }
+    let data = {
+        "password" : password,
+    };
 
     $.ajax({
         type: "DELETE",
         url: `/api/notice/${id}`,
-        async: false,
+        contentType: "application/json",
+        data: JSON.stringify(data),
         success: function (response) {
-            alert('메시지 삭제에 성공하였습니다.');
-            window.location.reload();
+            let check = response
+            if (check == true){
+                alert('메시지 삭제에 성공하였습니다.');
+                window.location.reload();
+            }else{
+                alert('비밀번호가 틀렸습니다.');
+            }
+
         }
     })
 }
