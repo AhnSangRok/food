@@ -9,24 +9,18 @@ function getPassword(id) {
     console.log(password)
     $.ajax({
         type: 'GET',
-        url: '/api/notice',
+        url: `/api/notice/${id}`,
         async:false,
         success: function (response) {
-            for (let i = 0; i < response.length; i++) {
-                let notice = response[i];
-                if (notice['id']==id){
-                    if (notice['password'] == password){
-                        pscheck = true;
-                        console.log(pscheck);
-                        return pscheck;
-                    }else {
-                        pscheck = false;
-                        alert("비밀번호를 다시 입력해주세요");
-                        console.log(pscheck);
-                        return pscheck;
-                    }
-                    break;
-                }
+            if (response['password'] == password){
+                pscheck = true;
+                console.log(pscheck);
+                return pscheck;
+            }else{
+                pscheck = false;
+                alert("비밀번호를 다시 입력해주세요");
+                console.log(pscheck);
+                return pscheck;
             }
         }
     })

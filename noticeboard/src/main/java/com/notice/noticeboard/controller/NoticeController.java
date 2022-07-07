@@ -7,7 +7,6 @@ import com.notice.noticeboard.service.NoticeService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 import java.util.Optional;
 
@@ -36,6 +35,10 @@ public class NoticeController {
     public Long deleteNotice(@PathVariable Long id) {
         noticeRepository.deleteById(id);
         return id;
+    }
+    @GetMapping("/api/notice/{id}")
+    public Optional<Notice> getOneNotice(@PathVariable Long id){
+        return noticeRepository.findById(id);
     }
 
 }
