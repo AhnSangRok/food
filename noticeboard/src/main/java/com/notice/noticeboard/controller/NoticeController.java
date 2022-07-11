@@ -46,4 +46,8 @@ public class NoticeController {
             return false;
         }
     }
+    @GetMapping("/api/notice/{id}")
+    public Optional<Notice> getNoticeOne(@PathVariable Long id){
+        return noticeRepository.findById(id);
+    }
 }
