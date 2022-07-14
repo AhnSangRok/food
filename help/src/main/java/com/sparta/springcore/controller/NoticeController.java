@@ -21,13 +21,15 @@ public class NoticeController {
     //전체 글 조회
     @GetMapping("/homepage/notice")
     public List<Notice> getNotice(){
-        return noticeRepository.findAllByOrderByModifiedAtDesc();
+        return noticeService.getNotice();
     }
 
     //글 게시
     @PostMapping("/homepage/notice")
     public Notice createNotice(@RequestBody NoticeRequestDto requestDto, @AuthenticationPrincipal UserDetailsImpl userDetails){
         Long userId = userDetails.getUser().getId();
+        System.out.println(userId);
+        System.out.println(requestDto.getText());
         Notice notice = noticeService.createNotice(requestDto, userId);
         return notice;
     }

@@ -41,6 +41,38 @@ function backForm(id) {
 
 $(document).ready(function () {
     getNotice();
+    if ($.cookie('token')) {
+        $.ajaxSetup({
+            headers:{
+                'Authorization': $.cookie('token')
+            }
+        })
+    } else {
+        window.location.href = '/user/loginView';
+    }
+    $.ajax({
+        type: "POST",
+        url: `/user/userinfo`,
+        contentType: "application/json",
+        success: function (response) {
+            const username = response.username;
+            const isAdmin = !!response.admin;
+
+            if (!username) {
+                window.location.href = '/user/loginView';
+            }
+
+            $('#username').text(username);
+            if (isAdmin) {
+                getNotice(true);
+            } else {
+                getNotice();
+            }
+        },
+        error: function() {
+            window.location.href = '/user/loginView';
+        }
+    })
 })
 
 // 글 정보 가져오기

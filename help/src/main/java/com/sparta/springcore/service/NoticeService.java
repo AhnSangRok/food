@@ -2,9 +2,12 @@ package com.sparta.springcore.service;
 
 import com.sparta.springcore.dto.NoticeRequestDto;
 import com.sparta.springcore.model.Notice;
+import com.sparta.springcore.model.Product;
 import com.sparta.springcore.repository.NoticeRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor
@@ -25,5 +28,8 @@ public class NoticeService {
         noticeRepository.save(notice);
 
         return notice;
+    }
+    public List<Notice> getNotice() {
+        return noticeRepository.findAllByOrderByModifiedAtDesc();
     }
 }
