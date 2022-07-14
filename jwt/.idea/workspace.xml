@@ -4,17 +4,84 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb06d887-257e-434f-9656-5e5f82fd1461" name="Changes" comment="5주차 숙제풀이">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/springcore/controller/NoticeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/springcore/dto/NoticeRequestDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/springcore/dto/Timestamped.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/springcore/model/Notice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/springcore/model/NoticeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/springcore/service/NoticeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/homepage.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/notice.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/homepage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../help/build/resources/main/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../help/build/resources/main/application.properties" afterDir="false" />
+    <list default="true" id="bb06d887-257e-434f-9656-5e5f82fd1461" name="Changes" comment="jwt notice 과제 수정">
+      <change afterPath="$PROJECT_DIR$/.gradle/7.1.1/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/7.1.1/dependencies-accessors/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/7.1.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/7.1.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/7.1.1/fileChanges/last-build.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/7.1.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/7.1.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/7.1.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/7.1.1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/vcs-1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/sparta/springcore/SpringcoreApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/sparta/springcore/controller/HomeController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/sparta/springcore/controller/ItemSearchController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/sparta/springcore/controller/NoticeController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/sparta/springcore/controller/ProductController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/sparta/springcore/controller/UserController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/sparta/springcore/dto/ItemDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/sparta/springcore/dto/KakaoUserInfoDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/sparta/springcore/dto/NoticeRequestDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/sparta/springcore/dto/ProductMypriceRequestDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/sparta/springcore/dto/ProductRequestDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/sparta/springcore/dto/SignupRequestDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/sparta/springcore/dto/Timestamped.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/sparta/springcore/dto/UserInfoDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/sparta/springcore/model/Notice.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/sparta/springcore/model/NoticeRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/sparta/springcore/model/Product.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/sparta/springcore/model/User.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/sparta/springcore/model/UserRoleEnum$Authority.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/sparta/springcore/model/UserRoleEnum.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/sparta/springcore/repository/ProductRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/sparta/springcore/repository/UserRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/sparta/springcore/security/FilterSkipMatcher.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/sparta/springcore/security/FormLoginSuccessHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/sparta/springcore/security/UserDetailsImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/sparta/springcore/security/UserDetailsServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/sparta/springcore/security/WebSecurityConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/sparta/springcore/security/filter/FormLoginFilter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/sparta/springcore/security/filter/JwtAuthFilter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/sparta/springcore/security/jwt/HeaderTokenExtractor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/sparta/springcore/security/jwt/JwtDecoder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/sparta/springcore/security/jwt/JwtPreProcessingToken.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/sparta/springcore/security/jwt/JwtTokenUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/sparta/springcore/security/provider/FormLoginAuthProvider.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/sparta/springcore/security/provider/JWTAuthProvider.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/sparta/springcore/service/ItemSearchService$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/sparta/springcore/service/ItemSearchService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/sparta/springcore/service/KakaoUserService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/sparta/springcore/service/NoticeService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/sparta/springcore/service/ProductService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/sparta/springcore/service/UserService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/static/basic.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/static/css/homepage.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/static/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/static/forbidden.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/static/images/delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/static/images/done.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/static/images/edit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/static/images/icon-save.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/static/images/icon-search.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/static/images/og_selectshop.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/static/images/send.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/static/notice.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/static/timeline.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/templates/homepage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/templates/signup.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/sparta/springcore/SpringcoreApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -332,14 +399,7 @@
       <workItem from="1632368897149" duration="22609000" />
       <workItem from="1632402299285" duration="4256000" />
       <workItem from="1657798880602" duration="2752000" />
-      <workItem from="1657801671006" duration="724000" />
-    </task>
-    <task id="LOCAL-00020" summary="1주차 숙제 답안코드 (ItemSearchController, ItemSearchService)">
-      <created>1630534099186</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1630534099186</updated>
+      <workItem from="1657801671006" duration="1034000" />
     </task>
     <task id="LOCAL-00021" summary="05. '스프링 시큐리티' 프레임워크">
       <created>1630732870776</created>
@@ -677,7 +737,14 @@
       <option name="project" value="LOCAL" />
       <updated>1632281314380</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="jwt notice 과제 수정">
+      <created>1657802646900</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1657802646900</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -799,7 +866,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="test 06-07. Mockito mock 을 사용한 단위 테스트" />
     <MESSAGE value="06. Mock object 직접 구현을 통한 단위 테스트" />
     <MESSAGE value="07. Mockito mock 을 사용한 단위 테스트" />
     <MESSAGE value="test 10" />
@@ -824,7 +890,8 @@
     <MESSAGE value="12. 스프링 예외 처리 방법" />
     <MESSAGE value="13. 스프링 Global 예외 처리 방법" />
     <MESSAGE value="5주차 숙제풀이" />
-    <option name="LAST_COMMIT_MESSAGE" value="5주차 숙제풀이" />
+    <MESSAGE value="jwt notice 과제 수정" />
+    <option name="LAST_COMMIT_MESSAGE" value="jwt notice 과제 수정" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

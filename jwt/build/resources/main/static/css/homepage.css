@@ -1,0 +1,55 @@
+* {
+    font-family: 'Noto Serif KR', serif;
+}
+.mypic {
+    width: 100%;
+    height: 300px;
+
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FH6ygr%2FbtqCQphHYpy%2FkFBjdGqaC2rnCCAaq1OJD0%2Fimg.jpg');
+    background-position: center 30%;
+    background-size: cover;
+
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.mypost {
+    width: 95%;
+    max-width: 500px;
+    margin: 20px auto 20px auto;
+
+    box-shadow: 0px 0px 3px 0px black;
+    padding: 20px;
+}
+
+.mypost > button {
+    margin-top: 15px;
+}
+
+.mycards {
+    width: 95%;
+    max-width: 500px;
+    margin: auto;
+}
+
+.mycards > .card {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.edit {
+    width: 100%;
+}
+.te-edit{
+    width: 100%;
+}
+.blockquote-footer{
+    margin-top: 10px;
+}
+
+.text-form{
+    margin-top: 20px;
+}
