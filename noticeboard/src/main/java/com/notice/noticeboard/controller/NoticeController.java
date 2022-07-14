@@ -1,8 +1,8 @@
 package com.notice.noticeboard.controller;
 
-import com.notice.noticeboard.domain.Notice;
-import com.notice.noticeboard.domain.NoticeRepository;
-import com.notice.noticeboard.domain.NoticeRequestDto;
+import com.notice.noticeboard.model.Notice;
+import com.notice.noticeboard.repository.NoticeRepository;
+import com.notice.noticeboard.dto.NoticeRequestDto;
 import com.notice.noticeboard.service.NoticeService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;

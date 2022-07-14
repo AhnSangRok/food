@@ -1,6 +1,7 @@
-package com.notice.noticeboard.domain;
+package com.example.blog.repository;
 
-import org.aspectj.weaver.ast.Not;
+
+import com.example.blog.model.Notice;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

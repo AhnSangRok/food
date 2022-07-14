@@ -1,10 +1,9 @@
 package com.notice.noticeboard.service;
 
-import com.notice.noticeboard.domain.Notice;
-import com.notice.noticeboard.domain.NoticeRepository;
-import com.notice.noticeboard.domain.NoticeRequestDto;
+import com.notice.noticeboard.model.Notice;
+import com.notice.noticeboard.repository.NoticeRepository;
+import com.notice.noticeboard.dto.NoticeRequestDto;
 import lombok.RequiredArgsConstructor;
-import org.aspectj.weaver.ast.Not;
 import org.springframework.stereotype.Service;
 
 

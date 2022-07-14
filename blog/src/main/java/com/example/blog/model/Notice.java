@@ -1,5 +1,7 @@
-package com.notice.noticeboard.domain;
+package com.example.blog.model;
 
+import com.example.blog.dto.NoticeRequestDto;
+import com.example.blog.dto.Timestamped;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
