@@ -5,16 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bb06d887-257e-434f-9656-5e5f82fd1461" name="Changes" comment="jwt notice 과제 수정">
-      <change afterPath="$PROJECT_DIR$/../food/src/main/java/com/spring/food/controller/RestaurantController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../food/src/main/java/com/spring/food/dto/FoodRequestDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../food/src/main/java/com/spring/food/dto/RestaurantRequestDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../food/src/main/java/com/spring/food/model/Food.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../food/src/main/java/com/spring/food/model/FoodRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../food/src/main/java/com/spring/food/model/Restaurant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../food/src/main/java/com/spring/food/model/RestaurantRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../food/src/main/java/com/spring/food/service/FoodService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../food/src/main/java/com/spring/food/service/RestaurantService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../food/src/main/java/com/spring/food/controller/OrdersController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../food/src/main/java/com/spring/food/dto/FoodOrderRequestDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../food/src/main/java/com/spring/food/model/Orders.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../food/src/main/java/com/spring/food/model/OrdersRespository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../food/src/main/java/com/spring/food/service/OrdersService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../food/src/test/java/com/spring/food/FoodIntegrationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../food/src/test/java/com/spring/food/RestaurantIntegrationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../food/src/main/java/com/spring/food/controller/RestaurantController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../food/src/main/java/com/spring/food/controller/RestaurantController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../food/src/main/java/com/spring/food/model/Food.java" beforeDir="false" afterPath="$PROJECT_DIR$/../food/src/main/java/com/spring/food/model/Food.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../food/src/main/java/com/spring/food/service/FoodService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../food/src/main/java/com/spring/food/service/FoodService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../food/src/main/java/com/spring/food/service/RestaurantService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../food/src/main/java/com/spring/food/service/RestaurantService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -127,7 +128,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/User/Desktop/sparta_spring/jwt",
+    "last_opened_file_path": "C:/Users/User/Desktop/sparta_spring/springcore",
     "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
     "spring.configuration.checksum": "694321cf37f1922e80f54e63ad72f4bb"
   },
@@ -354,6 +355,9 @@
       <workItem from="1657938616403" duration="1147000" />
       <workItem from="1657940039506" duration="4410000" />
       <workItem from="1657958307443" duration="1840000" />
+      <workItem from="1657974303475" duration="839000" />
+      <workItem from="1658047059444" duration="51000" />
+      <workItem from="1658106946706" duration="4617000" />
     </task>
     <task id="LOCAL-00022" summary="06. 회원 가입 UI 반영">
       <created>1630739091708</created>

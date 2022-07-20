@@ -8,7 +8,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
+import java.util.Objects;
 
 @Service
 @RequiredArgsConstructor
@@ -20,24 +20,32 @@ public class FoodService {
     public List<Food> getFood(Long restaurantId) {
         return this.foodRepository.findAllByRestaurantId(restaurantId);
     }
-    public String createFood(FoodRequestDto requestDto, Long RestaurantId) {
-        String error = "";
+
+    public Food createFood(FoodRequestDto requestDto, Long RestaurantId) throws Exception {
         String name = requestDto.getName();
         int price = requestDto.getPrice();
+
 //            return "음식점이 존재하지 않습니다.";
         List<Food> foods = foodRepository.findAllByRestaurantId(RestaurantId);
-        Optional<Food> foodName = foodRepository.findByName(name);
 
-        if (foodName.isPresent()){
-            System.out.println(name);
-            return "중복되는 음식이 있습니다.";
-        } else if (price%100 > 0) {
-            return "100원 단위부터 입력 가능합니다.";
+        //중복되는 음식 확인
+        if (foods!=null){
+            for (Food value : foods) {
+                if (Objects.equals(value.getName(), name)) {
+                    throw new Exception("중복되는 음식이 있습니다.");
+
+                }
+            }
+        }
+        //음식 가격 확인
+        if (price % 100 > 0) {
+            throw new Exception("100원 단위부터 입력 가능합니다.");
+        } else if (price < 100 || price > 1000000) {
+            throw new Exception("100원에서 1000000까지만 가능합니다.");
         }
 
-        Food food = new Food(requestDto, RestaurantId);
-        this.foodRepository.save(food);
+        Food food = new Food(requestDto,RestaurantId);
 
-        return error;
+        return foodRepository.save(food);
     }
 }
