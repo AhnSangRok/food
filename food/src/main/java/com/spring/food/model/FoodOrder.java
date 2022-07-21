@@ -1,21 +1,18 @@
 package com.spring.food.model;
 
+import com.spring.food.dto.FoodOrderDto;
+import com.spring.food.dto.FoodOrderRequestDto;
 import com.spring.food.dto.FoodRequestDto;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import org.springframework.stereotype.Service;
+import lombok.*;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Getter
+@Entity
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
-public class Food {
+public class FoodOrder {
 
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Id
@@ -25,9 +22,15 @@ public class Food {
     private String name;
 
     @Column(nullable = false)
+    private int quantity;
+
+    @Column(nullable = false)
     private int price;
 
-    @JoinColumn(name="restaurant_id", nullable = false)
+    @ManyToOne(cascade = CascadeType.ALL)
+    private Food food;
+
     @ManyToOne
-    private Restaurant restaurant;
+    private Orders orders;
+
 }

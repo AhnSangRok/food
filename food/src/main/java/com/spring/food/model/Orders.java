@@ -1,40 +1,32 @@
 package com.spring.food.model;
 
-import com.spring.food.dto.FoodOrderDto;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import com.spring.food.dto.OrderDto;
+import lombok.*;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.List;
 
 @Getter
-@Setter
+@Builder
 @Entity
 @NoArgsConstructor
+@AllArgsConstructor
 public class Orders{
 
     @Id
-    @Column(name = "id", nullable = false)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(nullable = false)
     private String restaurantName;
 
-    @Column(nullable = false)
-    private List<FoodOrderDto> foods;
-
-    @Column(nullable = false)
-    private int deliveryFee;
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "orders_id")
+    private List<FoodOrder> foods;
 
     @Column(nullable = false)
     private int totalPrice;
 
-    public void foodOrderList(List<FoodOrderDto> foods){
-        this.foods = foods;
-    }
+
 
 }

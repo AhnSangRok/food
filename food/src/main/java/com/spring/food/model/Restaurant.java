@@ -1,21 +1,21 @@
 package com.spring.food.model;
 
-import com.spring.food.dto.RestaurantRequestDto;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Getter
-@Setter
-@NoArgsConstructor
 @Entity
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Restaurant {
 
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "RestaurantId")
     @Id
     private Long id;
 
@@ -29,9 +29,4 @@ public class Restaurant {
     private int deliveryFee;
 
 
-    public Restaurant(RestaurantRequestDto requestDto) {
-        this.name = requestDto.getName();
-        this.minOrderPrice = requestDto.getMinOrderPrice();
-        this.deliveryFee = requestDto.getDeliveryFee();
-    }
 }

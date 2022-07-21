@@ -25,9 +25,8 @@ public class RestaurantController {
     }
 
     @PostMapping("/restaurant/register") // 음식점 등록 , Response값 없음
-    public ResponseEntity<Restaurant> createRestaurant(@RequestBody RestaurantRequestDto requestDto) throws Exception {
-        Restaurant restaurant = restaurantService.register(requestDto);
-        return ResponseEntity.ok().body(restaurant);
+    public Restaurant createRestaurant(@RequestBody RestaurantRequestDto requestDto) throws Exception {
+        return restaurantService.register(requestDto);
     }
 
 }

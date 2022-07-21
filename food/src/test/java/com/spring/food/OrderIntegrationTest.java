@@ -120,7 +120,7 @@ class OrderIntegrationTest {
         // when
         Long restaurantId = registeredRestaurant.id;
         ResponseEntity<FoodIntegrationTest.FoodDto[]> response = restTemplate.getForEntity(
-                "/restaurant/" + restaurantId + "/foods",
+                "/restaurant/" + restaurantId + "/food",
                 FoodIntegrationTest.FoodDto[].class);
 
         // then
@@ -358,7 +358,7 @@ class OrderIntegrationTest {
     void test8() {
         // when
         ResponseEntity<OrderDto[]> response = restTemplate.getForEntity(
-                "/orders",
+                "/order",
                 OrderDto[].class);
 
         assertEquals(HttpStatus.OK, response.getStatusCode());

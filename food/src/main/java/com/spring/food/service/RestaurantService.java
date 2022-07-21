@@ -2,7 +2,7 @@ package com.spring.food.service;
 
 import com.spring.food.dto.RestaurantRequestDto;
 import com.spring.food.model.Restaurant;
-import com.spring.food.model.RestaurantRepository;
+import com.spring.food.repository.RestaurantRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -19,7 +19,7 @@ public class RestaurantService {
     }
 
     public Restaurant register(RestaurantRequestDto requestDto) throws Exception {
-        String error = "";
+
         int minOrderPrice = requestDto.getMinOrderPrice();
         int deliveryFee = requestDto.getDeliveryFee();
 
@@ -36,11 +36,15 @@ public class RestaurantService {
             throw new Exception("500원 단위부터 입력 가능합니다.");
         }
 
-        Restaurant restaurant = new Restaurant(requestDto);
+        Restaurant restaurant = Restaurant.builder()
+                .name(requestDto.getName())
+                .minOrderPrice(minOrderPrice)
+                .deliveryFee(deliveryFee)
+                .build();
 
         restaurantRepository.save(restaurant);
 
-        return restaurantRepository.save(restaurant);
+        return restaurant;
     }
 
 //    public Restaurant register(RestaurantRequestDto requestDto) {

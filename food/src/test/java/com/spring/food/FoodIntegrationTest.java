@@ -102,7 +102,7 @@ class FoodIntegrationTest {
             // given
             List<FoodDto> foodsRequest = new ArrayList<>();
             // 음식2 추가
-            foodsRequest.add(food2);
+//            foodsRequest.add(food2);
 
             for (FoodDto food:foodsRequest){
                 System.out.println(food.getName());
@@ -134,7 +134,7 @@ class FoodIntegrationTest {
 
             // 음식3 추가
             foodsRequest.add(food4);
-            foodsRequest.add(food3);
+//            foodsRequest.add(food3);
 
             // 음식4 추가
 
